@@ -974,15 +974,15 @@ module SimpleRecord
         elsif q_type == :first
           ret = results[:items].first
             # todo: we should store request_id and box_usage with the object maybe?
-          cache_results(ret)
+          #cache_results(ret)
         elsif results[:single_only]
           ret = results[:single]
           #puts 'results[:single] ' + ret.inspect
-          cache_results(ret)
+          #cache_results(ret)
         else
           #puts 'last step items = ' + results.inspect
           if results[:items] #.is_a?(Array)
-            cache_results(results[:items])
+            #cache_results(results[:items])
             ret = SimpleRecord::ResultsArray.new(self, params, results, next_token)
           end
         end
